@@ -17,8 +17,6 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 
     List<Movie> findByRatingGreaterThanEqual(Double rating);
 
-    // --------------------
-    // PAGINATION (ДОБАВЛЕНО)
-    // --------------------
+
     Page<Movie> findAll(Pageable pageable);
 }

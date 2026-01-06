@@ -1,6 +1,5 @@
 package com.movie.dea.entity;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 

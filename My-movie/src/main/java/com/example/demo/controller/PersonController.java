@@ -8,7 +8,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/persons")
-public class PersonController {
+public class
+
+PersonController {
 
     private final PersonService personService;
 

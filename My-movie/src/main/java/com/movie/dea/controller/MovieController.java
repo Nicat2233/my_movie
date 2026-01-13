@@ -1,6 +1,5 @@
 package com.movie.dea.controller;
 
-import com.movie.dea.entity.Movie;
 import com.movie.dea.service.MovieService;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;

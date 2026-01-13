@@ -1,6 +1,5 @@
 package com.movie.dea.repository;
 
-import com.movie.dea.entity.Movie;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

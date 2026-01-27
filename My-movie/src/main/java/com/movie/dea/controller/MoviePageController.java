@@ -2,12 +2,16 @@ package com.movie.dea.controller;
 
 import com.movie.dea.service.MovieService;
 
+
+
+import com.movie.dea.entity.Movie;
+
+
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 @Controller
 @RequestMapping("/movies")
 public class MoviePageController { // controller UI

@@ -1,5 +1,6 @@
 package com.movie.dea.controller;
 
+import com.movie.dea.entity.Movie;
 import com.movie.dea.service.MovieService;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
@@ -24,10 +25,10 @@ public class MovieController {
         return movieService.getMoviesByPage(page    , size);
     }
 
-    @GetMapping("/all")
-    public List<Movie> getMovies(){
-        return movieService.getAllMovie();
-    }
+//    @GetMapping("/all")
+//    public List<Movie> getMovies(){
+//        return movieService.getAllMovie(sort);
+//    }
 
     @GetMapping("/title/{title}")
     public List<Movie> getMoviesByTitle(@PathVariable String title) {
@@ -65,7 +66,7 @@ public class MovieController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public String deleteMovie(@PathVariable Integer id) {
-        return movieService.deleteById(id);
+    public void deleteMovie(@PathVariable Integer id) {
+        movieService.deleteById(id);
     }
 }

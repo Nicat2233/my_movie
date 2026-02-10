@@ -15,7 +15,7 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
     @Query(value = "SELECT * FROM movies WHERE LOWER(title) LIKE LOWER(CONCAT('%', :title, '%'))",nativeQuery = true)
     List<Movie> findByTitle(String title);
 
-    List<Movie> findByTitleContainingIgnoreCase(String title);
+    List<Movie> findByTitleContainingIgnoreCase(String title); // its for UI
 
     @Query(value = "SELECT * FROM movies WHERE LOWER(genre) LIKE LOWER(CONCAT('%', :genre, '%'))",nativeQuery = true)
     List<Movie> findByGenre(String genre);

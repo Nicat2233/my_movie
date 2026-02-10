@@ -1,57 +1,74 @@
 package com.movie.dea.dto;
 
-
 import jakarta.validation.constraints.NotBlank;
-import lombok.Data;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
-@Data
-public class MovieForm {
+import java.time.LocalDate;
 
-    private Integer user_id;
-    @NotBlank(message = "Username is required!")
-    private String username;
-    @NotBlank(message = "Password is required!")
-    private String password;
-    private String phone_number;
-    private Integer age;
 
-    public Integer getUser_id() {
-        return user_id;
+public class MovieForm { // for UI
+
+    private Integer id;
+
+    @NotBlank(message = "Title is required!")
+    private String title;
+    @NotBlank(message = "Genre is required!")
+    private String genre;
+
+    //    @NotNull(message = "dont leave empty")
+    private LocalDate releaseDate;
+    //    @NotNull(message = "dont leave empty")
+    private Double rating;
+    //    @NotBlank(message = "Duration is required!")
+    private String duration;
+
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setUser_id(Integer user_id) {
-        this.user_id = user_id;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getPassword() {
-        return password;
+    public String getTitle() {
+        return title;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
-    public Integer getAge() {
-        return age;
+    public LocalDate getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
-    public String getUsername() {
-        return username;
+    public String getDuration() {
+        return duration;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public Double getRating() {
+        return rating;
+    }
+
+    public void setRating(Double rating) {
+        this.rating = rating;
     }
 }
